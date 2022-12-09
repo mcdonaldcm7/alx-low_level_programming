@@ -19,6 +19,7 @@ int main(void)
 	while ((n2 % 10) != 0)
 		n2--;
 	lastDigit = nabs - n2;
+	lastDigit = n > 0 ? lastDigit : (-1 * lastDigit);
 	printf("Last digit of %d is %d ", n, lastDigit);
 	if (lastDigit > 5)
 		printf("and is greater than 5\n");

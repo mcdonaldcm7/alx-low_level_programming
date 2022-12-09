@@ -2,7 +2,7 @@
 
 /**
  *main- Entry point
-
+ *
  *Description: Prints the size of various types on various machines.
  *Return: 0
  */

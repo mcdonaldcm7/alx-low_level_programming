@@ -4,4 +4,6 @@ This README.md file contains details of the functionalities of the scripts conta
 
   1-last_digit: This program will assign a variable to n each time it is executed, And will print varying output depending on the last digit of the number n.
 
-  
+  2-print_alphabet.c: This program prints the alphabet in lowercase, followed by a new line.
+
+   

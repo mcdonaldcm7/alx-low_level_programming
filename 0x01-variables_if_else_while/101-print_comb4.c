@@ -23,7 +23,7 @@ int main(void)
 					continue;
 				if (k <= j || j <= i)
 					continue;
-				if (i > 1 || j > 1 || k > 1 && printed)
+				if (i > 1 || j > 1 || (k > 1 && printed))
 				{
 					putchar(44);
 					putchar(32);

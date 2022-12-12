@@ -10,7 +10,9 @@
 int main(void)
 {
 	int i, j, k, l;
+	bool printed;
 
+	printed = false;
 	for (i = 0; i < 10; i++)
 	{
 		for (j = 0; j < 10; j++)
@@ -21,7 +23,7 @@ int main(void)
 				{
 					if (k == i && l == j)
 						continue;
-					if (i > 1 || j > 1 || k > 1 || l > 1)
+					if (printed)
 					{
 						putchar(44);
 						putchar(32);
@@ -31,6 +33,7 @@ int main(void)
 					putchar(32);
 					putchar(48 + k);
 					putchar(48 + l);
+					printed = true;
 				}
 			}
 		}

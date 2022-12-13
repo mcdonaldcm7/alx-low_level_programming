@@ -20,4 +20,6 @@ This READMEfile contains a detailed description of all the program file(s) conta
 
   10-add.c: This program adds the two input integer together and returns the result.
 
+  9-times_table.c: This program prints the 9 times table, starting with 0.
+
   11-print_to_98.c: This program prints all natural numbers from the input to 98.

@@ -26,4 +26,6 @@ This READMEfile contains a detailed description of all the program file(s) conta
 
   100-print_times_table: This program prints n times table, starting with 0, where n is any integer ranging from 0 to 15.
 
-  101-natural.c: This program prints the sum of all multiples of 3 and 5 below 1024. 
+  101-natural.c: This program prints the sum of all multiples of 3 and 5 below 1024.
+
+  102-fibonacci.c: This program prints the first 50 fibonacci numbers. 

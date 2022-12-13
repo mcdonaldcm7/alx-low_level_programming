@@ -9,3 +9,7 @@ This READMEfile contains a detailed description of all the program file(s) conta
   3-islower.c: This program checks if the character given is a lowercase characters and then returns and integer based on the result of the check.
 
   4-isalpha.c: This program checks if the character given is an alphabet an returns an integer based on the result of the check. 
+
+  5-sign: This program prints the sign of the given numberand returns a number depending on the sign of the number.
+
+  

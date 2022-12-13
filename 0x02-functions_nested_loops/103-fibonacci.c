@@ -10,7 +10,7 @@ int main(void)
 {
 	unsigned long p1, p2, curr, sum;
 
-	p1 = 1, p2 = 2, sum = 2;
+	curr = 0, p1 = 1, p2 = 2, sum = 2;
 	while (curr < 4000000)
 	{
 		curr = p1 + p2;
@@ -21,6 +21,7 @@ int main(void)
 		p1 = p2;
 		p2 = curr;
 	}
-	printf("%lu\n", sum);
+	printf("%lu", sum);
+	printf("\n");
 	return (0);
 }

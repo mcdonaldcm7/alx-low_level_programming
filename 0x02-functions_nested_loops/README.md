@@ -13,3 +13,7 @@ This READMEfile contains a detailed description of all the program file(s) conta
   5-sign.c: This program prints the sign of the given numberand returns a number depending on the sign of the number.
 
   6-abs.c: This progran returns the absolute number of the given number.
+
+  7-print_last_digit.c: This program prints the last digit of the given integer input.
+
+

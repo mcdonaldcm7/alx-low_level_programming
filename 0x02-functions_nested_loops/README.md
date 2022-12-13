@@ -30,4 +30,6 @@ This READMEfile contains a detailed description of all the program file(s) conta
 
   102-fibonacci.c: This program prints the first 50 fibonacci numbers.
 
-  103-fibonacci.c: This program prints the sum of even fibonacci numbers less than 4,000,000 
+  103-fibonacci.c: This program prints the sum of even fibonacci numbers less than 4,000,000
+
+  104-fibonacci.c: This program prints the first 98 fibonacci numbers. 

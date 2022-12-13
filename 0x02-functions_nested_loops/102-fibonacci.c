@@ -20,4 +20,5 @@ int main()
 		p2 = curr;
 	}
 	printf("\n");
+	return (0);
 }

@@ -10,8 +10,9 @@
  */
 void print_times_table(int n)
 {
-	int i, j;
+	int i, j, spaces;
 
+	spaces = (n * n) / 10;
 	if (n < 0 || n > 15)
 		return;
 
@@ -23,18 +24,15 @@ void print_times_table(int n)
 
 			if (j == n)
 			{
-				if (prod > n)
-					printf("%d", prod);
-				else
-					printf(" %d", prod);
+				printf("%d", prod);
 				continue;
 			}
-			if (prod < 10 && j != 0)
+			if (spaces >= 10)
 			{
-				printf(" %d, ", prod);
+				printf("%d,   ", prod);
 			} else
 			{
-				printf("%d, ", prod);
+				printf("%d,  ", prod);
 			}
 		}
 		printf("\n");

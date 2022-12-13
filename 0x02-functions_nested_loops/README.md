@@ -6,4 +6,4 @@ This READMEfile contains a detailed description of all the program file(s) conta
 
   2-print_alphabet_x10.c: This program  prints 10 times the alphabet. followed by a new line.
 
-  
+  3-islower.c: This program checks for lower case characters and then returns and integer based on the result of the check. 

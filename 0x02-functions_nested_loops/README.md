@@ -17,3 +17,5 @@ This READMEfile contains a detailed description of all the program file(s) conta
   7-print_last_digit.c: This program prints the last digit of the given integer input.
 
   8-24_hours.c: This program prints every minute of the time
+
+  10-add.c: This program adds the two input integer together and returns the result.

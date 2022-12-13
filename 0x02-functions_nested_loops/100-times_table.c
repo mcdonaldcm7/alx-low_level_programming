@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * times_table - Prints the n times table, starting with 0
+ * print_times_table - Prints the n times table, starting with 0
  *
  * @n: Integer input
  *
@@ -15,15 +15,15 @@ void print_times_table(int n)
 	if (n < 0 || n > 15)
 		return;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i <= n; i++)
 	{
-		for (j = 0; j < n; j++)
+		for (j = 0; j <= n; j++)
 		{
 			int prod = i * j;
 
-			if (j == (n - 1))
+			if (j == n)
 			{
-				if (prod > (n - 1))
+				if (prod > n)
 					printf("%d", prod);
 				else
 					printf(" %d", prod);

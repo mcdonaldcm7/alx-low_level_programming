@@ -10,6 +10,6 @@ This READMEfile contains a detailed description of all the program file(s) conta
 
   4-isalpha.c: This program checks if the character given is an alphabet an returns an integer based on the result of the check. 
 
-  5-sign: This program prints the sign of the given numberand returns a number depending on the sign of the number.
+  5-sign.c: This program prints the sign of the given numberand returns a number depending on the sign of the number.
 
-  
+  6-abs.c: This progran returns the absolute number of the given number.

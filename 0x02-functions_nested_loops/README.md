@@ -23,3 +23,7 @@ This READMEfile contains a detailed description of all the program file(s) conta
   9-times_table.c: This program prints the 9 times table, starting with 0.
 
   11-print_to_98.c: This program prints all natural numbers from the input to 98.
+
+  100-print_times_table: This program prints n times table, starting with 0, where n is any integer ranging from 0 to 15.
+
+  

@@ -1,0 +1,17 @@
+#include "main.h"
+
+int _putchar(char);
+
+void print_alphabet(void)
+{
+	int i;
+	char alph;
+
+	alph = 97;
+	for (i = 0; i < 26; i++)
+	{
+		_putchar(alph);
+		alph++;
+	}
+	_putchar('\n');
+}

@@ -3,7 +3,7 @@
 /**
  * isPrime - Checks if a number is prime
  *
- * @n - Integer parameter
+ * @n: Integer parameter
  *
  * Return: 1 if n is prime, 0 otherwise
  */

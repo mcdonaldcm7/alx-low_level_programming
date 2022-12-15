@@ -14,6 +14,10 @@ This README.md file contains a detailed description of the programs contained he
 
   6-print_line.c: This program draws a straight line in the terminal.
 
-  7-print_diagonal.c: This program draws a diagonal line, input number of times.
+  7-print_diagonal.c: This program draws a diagonal line with the input number dictating the size.
 
-   
+  8-print_square.c: This program draws a square with the input integer dictating the size.
+
+  9-fizz_buzz.c: This program prints the number 1 to 100 replacing multiples of 3 with Fizz and multiples of 5 with Buzz, and multiples of 3 and 5 with FizzBuzz
+
+  

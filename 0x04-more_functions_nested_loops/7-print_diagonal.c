@@ -2,6 +2,8 @@
 
 /**
  * print_diagonal - Draws n diagonal lines
+ *
+ * @n: Integer length of the diagonal
  */
 void print_diagonal(int n)
 {

@@ -2,6 +2,8 @@
 
 /**
  * print_line - This function prints n straight lines
+ *
+ * @n: Integer length of the line
  */
 void print_line(int n)
 {

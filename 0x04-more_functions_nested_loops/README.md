@@ -20,4 +20,5 @@ This README.md file contains a detailed description of the programs contained he
 
   9-fizz_buzz.c: This program prints the number 1 to 100 replacing multiples of 3 with Fizz and multiples of 5 with Buzz, and multiples of 3 and 5 with FizzBuzz
 
-  
+  10-print_triangle.c: This program draws a triangle of the specified input size.
+ 

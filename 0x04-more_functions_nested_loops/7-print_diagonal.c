@@ -18,4 +18,9 @@ void print_diagonal(int n)
 		_putchar(92);
 		_putchar(10);
 	}
+
+	if (n <= 0)
+	{
+		_putchar(10);
+	}
 }

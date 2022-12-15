@@ -14,4 +14,6 @@ This README.md file contains a detailed description of the programs contained he
 
   6-print_line.c: This program draws a straight line in the terminal.
 
-  
+  7-print_diagonal.c: This program draws a diagonal line, input number of times.
+
+   

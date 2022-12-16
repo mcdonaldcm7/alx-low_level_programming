@@ -21,7 +21,7 @@ int getPow(int n)
 		pow--;
 		divisor /= 10;
 		if (divisor == 0)
-			break;
+			return (0);
 		rem = n / divisor;
 		h = rem >= 0 ? rem : -rem;
 	}

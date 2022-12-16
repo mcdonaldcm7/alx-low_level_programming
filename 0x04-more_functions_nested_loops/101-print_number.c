@@ -9,14 +9,21 @@
  */
 int getPow(int n)
 {
-	int pow, divisor;
+	int pow, rem, h;
+	unsigned int divisor;
 
-	pow = 0;
-	divisor = 10;
-	while ((n / divisor) > 0)
+	pow = 9;
+	divisor = 1000000000;
+	rem = n / divisor;
+	h = rem >= 0 ? rem : -rem;
+	while (h <= 0)
 	{
-		pow++;
-		divisor *= 10;
+		pow--;
+		divisor /= 10;
+		if (divisor == 0)
+			break;
+		rem = n / divisor;
+		h = rem >= 0 ? rem : -rem;
 	}
 	return (pow);
 }
@@ -49,15 +56,16 @@ int raise(int base, int exp)
  */
 void print_number(int n)
 {
-	int digit, powDiff, pwr, num;
+	int digit, powDiff, pwr;
+	unsigned int num;
 
-	num = n;
+	num = n >= 0 ? n : -n;
 	powDiff = 0;
-	if (num < 0)
+	if (n < 0)
 	{
 		_putchar(45);
-		num *= -1;
 	}
+
 	while (num > 0)
 	{
 		pwr = getPow(num);

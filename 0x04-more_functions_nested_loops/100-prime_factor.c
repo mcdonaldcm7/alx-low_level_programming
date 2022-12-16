@@ -26,7 +26,7 @@ int isPrime(long int n)
  */
 int main(void)
 {
-	long int num, i;
+/*	long int num, i;
 
 	num = 612852475143;
 	for (i = ((num / 2) + 1); i > 1; i--)
@@ -39,6 +39,8 @@ int main(void)
 				break;
 			}
 		}
-	}
+	}*/
+	if (isPrime(204284158381))
+		printf("Is prime\n");
 	return (0);
 }

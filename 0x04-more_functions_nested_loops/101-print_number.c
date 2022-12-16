@@ -70,12 +70,10 @@ void print_number(int n)
 			_putchar(48);
 		}
 	}
-	if (num == 0)
+	if (n == 0)
 	{
 		_putchar(48);
 	}
 	if (n != 0 && n % 10 == 0)
-	{
 		_putchar(48);
-	}
 }

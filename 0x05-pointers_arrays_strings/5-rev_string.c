@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strlen - Returns the length of the input string s
@@ -26,18 +27,19 @@ int _strlen(char *s)
  */
 void rev_string(char *s)
 {
-	int length, count;
+	int length, begin, end;
 
-	length = _strlen(s) - 1;
+	length = _strlen(s);
+	end = length - 1;
 	if (length > 0)
 	{
-		for (count = 0; count <= (length / 2); count++, length--)
+		for (begin = 0; begin < (length / 2); begin++, end--)
 		{
 			char tmp;
 
-			tmp = s[count];
-			s[count] = s[length];
-			s[length] = tmp;
+			tmp = s[begin];
+			s[begin] = s[end];
+			s[end] = tmp;
 		}
 	}
 }

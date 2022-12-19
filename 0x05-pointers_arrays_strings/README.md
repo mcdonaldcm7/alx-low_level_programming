@@ -5,3 +5,5 @@ This README file contains a detailes description of the functions of the program
   1-swap.c: This program swaps the two input integer values.
 
   2-strlen.c: This program returns the length of the input string.
+
+  3-puts.c: This program prints the input string followed by a new line.

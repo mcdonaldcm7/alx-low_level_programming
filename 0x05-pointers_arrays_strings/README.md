@@ -1,0 +1,1 @@
+This README file contains a detailes description of the functions of the programs contained in this directory. They utilize pointers and aim to teach the writer and reader how the C pointers, array, and strings work.

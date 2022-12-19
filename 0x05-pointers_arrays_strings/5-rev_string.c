@@ -28,7 +28,7 @@ void rev_string(char *s)
 {
 	int length, count;
 
-	length = _strlen(s);
+	length = _strlen(s) - 1;
 	if (length > 0)
 	{
 		for (count = 0; count <= (length / 2); count++, length--)

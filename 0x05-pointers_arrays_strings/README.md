@@ -13,3 +13,5 @@ This README file contains a detailes description of the functions of the program
   5-rev_string.c: This program reverses a string.
 
   6-puts2.c: Prints the even character in the given string.
+
+  7-puts-half.c: This program (function) prints half of a string.

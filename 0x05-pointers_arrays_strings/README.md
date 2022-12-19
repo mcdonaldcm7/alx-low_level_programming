@@ -7,3 +7,5 @@ This README file contains a detailes description of the functions of the program
   2-strlen.c: This program returns the length of the input string.
 
   3-puts.c: This program prints the input string followed by a new line.
+
+  4-print_rev.c: This program prints a string, in reverse, followed by a new line.

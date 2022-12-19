@@ -9,3 +9,5 @@ This README file contains a detailes description of the functions of the program
   3-puts.c: This program prints the input string followed by a new line.
 
   4-print_rev.c: This program prints a string, in reverse, followed by a new line.
+
+  5-rev_string.c: This program reverses a string.

@@ -3,3 +3,5 @@ This README file contains a detailes description of the functions of the program
   0-reset_to_98.c: This program resets the input integer value to 98
 
   1-swap.c: This program swaps the two input integer values.
+
+  2-strlen.c: This program returns the length of the input string.

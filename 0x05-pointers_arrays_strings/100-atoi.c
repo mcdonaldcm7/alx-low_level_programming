@@ -2,13 +2,13 @@
 #include <stdbool.h>
 
 /**
- * _strlen - Returns the length of the input string
+ * strlen - Returns the length of the input string
  *
  * @s: Input string
  *
  * Return: Length of the string
  */
-int _strlen(const char* s)
+int strlen(char *s)
 {
 	int count;
 	

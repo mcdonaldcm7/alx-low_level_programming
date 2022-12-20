@@ -19,3 +19,5 @@ This README file contains a detailes description of the functions of the program
   8-print_array.c: This program prints n elements of an array of integers. where n is an integer input.
 
   9-strcpy.c: This function copies the string pointed to by the src parameter, including the null terminating null byte (\0), to the buffer pointed to by dest.
+
+  100-atoi.c: This function converts a string to an integer.

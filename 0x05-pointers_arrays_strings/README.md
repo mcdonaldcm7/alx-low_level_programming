@@ -15,3 +15,5 @@ This README file contains a detailes description of the functions of the program
   6-puts2.c: Prints the even character in the given string.
 
   7-puts-half.c: This program (function) prints half of a string.
+
+  8-print_array.c: This program prints n elements of an array of integers. where n is an integer input.

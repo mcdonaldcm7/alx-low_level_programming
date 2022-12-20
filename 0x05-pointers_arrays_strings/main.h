@@ -9,4 +9,5 @@ void print_rev(char*);
 void rev_string(char*);
 void puts2(char *str);
 void puts_half(char*);
+void print_array(int *a, int n);
 #endif

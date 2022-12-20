@@ -84,11 +84,11 @@ bool isPos(char *s)
 void putSign(int *num, char *s)
 {
 	int n;
-	bool isPos;
+	bool isPve;
 
 	n = *num;
-	isPos = isPos(s);
-	if (isPos)
+	isPve = isPos(s);
+	if (isPve)
 	{
 		if (n < 0)
 			n *= -1;

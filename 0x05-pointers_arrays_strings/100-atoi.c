@@ -11,7 +11,7 @@
 int LQ_strlen(char *s)
 {
 	int count;
-	
+
 	count = 0;
 	while (s[count] != '\0')
 	{
@@ -47,7 +47,7 @@ int getIndex(char *s)
 	int index;
 
 	index = 0;
-	while (!isDigit(s[index]))
+	while (!isDigit(s[index]) && s[index] != '\0')
 	{
 		index++;
 	}
@@ -63,19 +63,16 @@ int getIndex(char *s)
  */
 bool isPos(char *s)
 {
-	int count, length, pos, neg;
+	int count, length, neg;
 
 	length = LQ_strlen(s);
-	pos = 0;
 	neg = 0;
 	for (count = 0; !isDigit(s[count]) && count < length; count++)
 	{
-		if (s[count] == '+')
-			pos++;
-		else if (s[count] == '-')
+		if (s[count] == '-')
 			neg++;
 	}
-	return (pos >= neg);
+	return (neg % 2 == 0);
 }
 
 /**
@@ -84,6 +81,7 @@ bool isPos(char *s)
  * @s: Input string to convert
  *
  * Return: Integer conversion of s
+ * A
  */
 int _atoi(char *s)
 {

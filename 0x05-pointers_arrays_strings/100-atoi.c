@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdbool.h>
 
 /**
  * isDigit - Checks if the input character is a digit

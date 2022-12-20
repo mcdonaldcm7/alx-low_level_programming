@@ -2,6 +2,25 @@
 #include <stdbool.h>
 
 /**
+ * _strlen - Returns the length of the input string
+ *
+ * @s: Input string
+ *
+ * Return: Length of the string
+ */
+int _strlen(const char* s)
+{
+	int count;
+	
+	count = 0;
+	while (s[count] != '\0')
+	{
+		count++;
+	}
+	return (count);
+}
+
+/**
  * isDigit - Checks if the input character is a digit
  *
  * @c: Input character

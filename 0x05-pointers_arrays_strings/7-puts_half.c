@@ -32,7 +32,7 @@ void puts_half(char *str)
 	if (length % 2 == 0)
 		half = (length / 2);
 	else
-		half = (length - 1) / 2;
+		half = ((length - 1) / 2) + 1;
 
 	for (; half < length; half++)
 	{

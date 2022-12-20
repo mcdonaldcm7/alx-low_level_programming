@@ -65,7 +65,7 @@ bool isPos(char *s)
 {
 	int count, length, pos, neg;
 
-	length = _strlen(s);
+	length = LQ_strlen(s);
 	pos = 0;
 	neg = 0;
 	for (count = 0; !isDigit(s[count]) && count < length; count++)

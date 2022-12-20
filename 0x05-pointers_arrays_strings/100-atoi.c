@@ -8,6 +8,7 @@
  *
  * Return: Length of the string
  */
+
 int LQ_strlen(char *s)
 {
 	int count;
@@ -76,27 +77,6 @@ bool isPos(char *s)
 }
 
 /**
- * putSign - Ensures num is the right sign
- *
- * @num: Pointer to the number to correct
- * @s: Input string to fecth sign from
- */
-void putSign(int *num, char *s)
-{
-	int n;
-	bool isPve;
-
-	n = *num;
-	isPve = isPos(s);
-	if (isPve)
-	{
-		if (n < 0)
-			n *= -1;
-	}
-	*num = n;
-}
-
-/**
  * _atoi - Converts a string to an integer
  *
  * @s: Input string to convert
@@ -105,12 +85,10 @@ void putSign(int *num, char *s)
  */
 int _atoi(char *s)
 {
-	int count, num;
+	unsigned int count, num;
 
 	for (count = getIndex(s), num = 0; isDigit(s[count]); count++)
 	{
-		if (num == 1)
-			putSign(&num, s);
 		switch (s[count])
 		{															case '0':
 			num *= 10;

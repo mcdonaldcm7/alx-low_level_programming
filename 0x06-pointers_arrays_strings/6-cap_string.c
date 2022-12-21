@@ -11,7 +11,7 @@
 bool isAlph(char c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-			return (true);
+		return (true);
 	return (false);
 }
 
@@ -28,7 +28,8 @@ char *cap_string(char *s)
 	bool nWord;
 
 	nWord = isAlph(s[0]);
-	for (index = 0; s[index] != '\0'; index++)
+	index = 0;
+	while (s[index] != '\0')
 	{
 		char tmp = s[index];
 
@@ -44,8 +45,11 @@ char *cap_string(char *s)
 				|| tmp == '{' || tmp == '}' || tmp == ' ' || tmp == 9 || tmp == 10)
 		{
 			nWord = true;
+		} else
+		{
+			nWord = false;
 		}
-		nWord = false;
+		index++;
 	}
 	return (s);
 }

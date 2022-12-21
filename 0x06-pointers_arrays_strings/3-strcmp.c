@@ -6,7 +6,7 @@
  * @s1: First input string
  * @s2: Second input string
  *
- * Return: 15 if s1 > s2, -15 if s1 < s2, 0 if s1 == s2
+ * Return: Difference between two string
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -14,12 +14,16 @@ int _strcmp(char *s1, char *s2)
 
 	for (count = 0; s1[count] != '\0' && s2[count] != '\0'; count++)
 	{
-		if (s1[count] != s2[count])
+		char tmp1, tmp2;
+
+		tmp1 = s1[count];
+		tmp2 = s2[count];
+		if (tmp1 != tmp2)
 		{
-			if (s1[count] > s2[count])
-				return (15);
+			if (tmp1 > tmp2)
+				return (tmp1 - tmp2);
 			else
-				return (-15);
+				return (tmp1 - tmp2);
 		}
 	}
 	return (0);

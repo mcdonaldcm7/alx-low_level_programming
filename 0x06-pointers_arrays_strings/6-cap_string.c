@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdbool.h>
 
 /**
  * isAlph - checks if a character is an alphabet
@@ -8,11 +7,11 @@
  *
  * Return: true if c is an alphabet, false otherwise
  */
-bool isAlph(char c)
+int isAlph(char c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-			return (true);
-	return (false);
+			return (1);
+	return (0);
 }
 
 /**
@@ -24,10 +23,9 @@ bool isAlph(char c)
  */
 char *cap_string(char *s)
 {
-	int index;
-	bool nWord;
+	int index, nWord;
 
-	nWord = false;
+	nWord = 0;
 	index = 0;
 
 	while (s[index] != '\0')
@@ -40,15 +38,15 @@ char *cap_string(char *s)
 			{
 				s[index] -= 32;
 			}
-			nWord = false;
+			nWord = 0;
 		} else if (tmp == ',' || tmp == ';' || tmp == '.' || tmp == '!'
 				|| tmp == '?' || tmp == '"' || tmp == '(' || tmp == ')'
 				|| tmp == '{' || tmp == '}' || tmp == ' ' || tmp == 9 || tmp == 10)
 		{
-			nWord = true;
+			nWord = 1;
 		} else
 		{
-			nWord = false;
+			nWord = 0;
 		}
 		index++;
 	}

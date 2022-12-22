@@ -8,11 +8,34 @@
  *     */
 int main(void)
 {
-	    char str[] = "okay this	is a sample text and 1expect every;word.of this sentence to begin with a(capital)letter?and so i must ,have my wish come!true{and so it will}i hope\nand that's how it's got to be\"just how o want it\n";
+	    char s1[98];
 	        char *ptr;
+		    int i;
 
-		    ptr = cap_string(str);
-		        printf("%s", ptr);
-			    printf("%s", str);
-			        return (0);
+		        for (i = 0; i < 98 - 1; i++)
+				    {
+					            s1[i] = '*';
+						        }
+			    s1[i] = '\0';
+			        printf("%s\n", s1);
+				    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
+				        printf("%s\n", s1);
+					    printf("%s\n", ptr);
+					        ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
+						    printf("%s", s1);
+						        printf("%s", ptr);
+							    for (i = 0; i < 98; i++)
+								        {
+										        if (i % 10)
+												        {
+														            printf(" ");
+															            }
+											        if (!(i % 10) && i)
+													        {
+															            printf("\n");
+																            }
+												        printf("0x%02x", s1[i]);
+													    }
+							        printf("\n");
+								    return (0);
 }

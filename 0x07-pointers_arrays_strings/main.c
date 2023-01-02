@@ -8,12 +8,12 @@
  *     */
 int main(void)
 {
-	    char *s = "hello";
-	        char *f;
+   char *s = "hello";
+   char *f;
 
-		    f = _strchr(s, 'l');
-
-		        if (f != NULL)
+   f = _strchr(s, 'k');
+   
+   if (f != NULL)
 				    {
 					            printf("%s\n", f);
 						        }

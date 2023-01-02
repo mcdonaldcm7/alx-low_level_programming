@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdbool>
+#include <stdbool.h>
 
 /**
  * contains - Checks whether a word is in a string

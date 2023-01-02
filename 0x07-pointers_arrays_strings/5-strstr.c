@@ -27,7 +27,7 @@ int LQ_strlen(char *s)
  */
 char* _strstr(char* haystack, char* needle)
 {
-	int i, j, len;
+	int i, j;
 
 	for (i = 0, j = 0; haystack[i] != '\0'; i++)
 	{

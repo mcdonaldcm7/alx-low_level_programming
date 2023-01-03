@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * LQ_strlen - Retrieves the length of a string
@@ -29,8 +30,6 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
 
-	if (needle ==  "")
-		return (haystack);
 	if (LQ_strlen(needle) > 0)
 	{
 		for (i = 0, j = 0; haystack[i] != '\0'; i++)
@@ -53,6 +52,7 @@ char *_strstr(char *haystack, char *needle)
 				 j = 0;
 			}
 		}
-	}
+	} else if (LQ_strlen(needle) == 0)
+		return (haystack);
 	return (0);
 }

@@ -30,6 +30,7 @@ char *_strstr(char *haystack, char *needle)
 	int i, j;
 
 	if (needle ==  "")
+		return (haystack);
 	if (LQ_strlen(needle) > 0)
 	{
 		for (i = 0, j = 0; haystack[i] != '\0'; i++)

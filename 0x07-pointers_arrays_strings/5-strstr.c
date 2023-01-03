@@ -29,24 +29,27 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
 
-	for (i = 0, j = 0; haystack[i] != '\0'; i++)
+	if (LQ_strlen(needle) > 0)
 	{
-		if (haystack[i] == needle[j])
+		for (i = 0, j = 0; haystack[i] != '\0'; i++)
 		{
-			int count;
-
-			count = 0;
-			while (haystack[i] == needle[j] &&
-					(haystack[i] != '\0' && needle[j] != '\0'))
+			if (needle[j] != 0 && haystack[i] == needle[j])
 			{
-				count++;
-				i++;
-				j++;
-			}
+				int count;
 
-			if (count == LQ_strlen(needle))
-				return (&haystack[i - count]);
-			j = 0;
+				count = 0;
+				while (haystack[i] == needle[j] &&
+						(haystack[i] != '\0' && needle[j] != '\0'))
+				{
+					count++;
+					i++;
+					j++;
+				}
+
+				if (count == LQ_strlen(needle))
+					return (&haystack[i - count]);
+				 j = 0;
+			}
 		}
 	}
 	return (0);

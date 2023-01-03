@@ -37,7 +37,6 @@ char *_strstr(char *haystack, char *needle)
 			{
 				int count;
 
-				B
 				count = 0;
 				while (haystack[i] == needle[j] &&
 						(haystack[i] != '\0' && needle[j] != '\0'))

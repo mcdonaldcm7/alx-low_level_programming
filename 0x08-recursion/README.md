@@ -2,8 +2,11 @@ This file contains a detail description of the program contained in this directo
 
   0-puts_recursion.c: This file contains the function definition for _puts_recursion which prints a string, followed by a new line.
 
+  1-print_rev_recursion.c: The funtion contained here prints a string in reverse.
+
   2-strlen_recursion.c: The function contained here returns the length of a string.
 
   3-factorial.c: This funciton returns the factorial of the input integer.
 
   4-pow_recursion.c: This function returns the value of x raised to the power of y.
+

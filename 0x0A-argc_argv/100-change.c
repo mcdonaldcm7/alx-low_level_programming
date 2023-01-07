@@ -38,7 +38,7 @@ int change(int value)
 		{
 			div = value / 2;
 			value -= div * 2;
-			count += div;	
+			count += div;
 		} else
 		{
 			count += value;
@@ -56,7 +56,7 @@ int change(int value)
  *
  * Return: 1 iferror, 0 otherwise
  */
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	int cents;
 

@@ -3,10 +3,10 @@
 /**
  * _strpbrk - Does ...
  *
- * @c: Input string
+ * @s: Input string
  * @accept: String
  *
- * Return: char *
+ * Return: s
  */
 char *_strpbrk(char *s, char *accept)
 {

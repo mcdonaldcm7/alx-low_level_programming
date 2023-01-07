@@ -9,3 +9,5 @@ This README file contains a detailed description of the programs contained in th
   3-mul.c: This program that multiplies two numbers
 
   4-add.c: This program adds positive numbers
+
+  100-change.c: This is a program that prints the minimum number of coins to make change for an amount of money

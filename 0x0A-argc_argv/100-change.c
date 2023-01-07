@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * chage - gives the minimum number of times on needs to reduce value to 0
+ * change - gives the minimum number of times on needs to reduce value to 0
  *
  * @value: input integer
  *
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	cents = atoi(argv[1]);
 	if (cents < 0)
 	{

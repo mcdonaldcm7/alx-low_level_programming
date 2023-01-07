@@ -5,3 +5,5 @@ This README file contains a detailed description of the programs contained in th
   1-args.c: This program prints the number of arguments passed into it
 
   2-args.c: This program prints all the arguments it receives
+
+  3-mul.c: This program that multiplies two numbers

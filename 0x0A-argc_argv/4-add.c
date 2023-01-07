@@ -1,6 +1,28 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+
+/**
+ * isNum - checks if s is a valid digit
+ *
+ * @s: Input string
+ *
+ * Return: true if s is all digit, false otherwise
+ */
+bool isNum(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] < 48 || s[i] > 57)
+			return (false);
+		i++;
+	}
+	return (true);
+}
 
 /**
  * main - Adds two positive numbers
@@ -22,7 +44,7 @@ int main(int argc, char **argv)
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if ((atoi(argv[i]) == 0 && *argv[i] != '0') || atoi(argv[i]) < 0)
+		if ((atoi(argv[i]) == 0 && *argv[i] != '0') || atoi(argv[i]) < 0 || !isNum(argv[i]))
 		{
 			printf("Error\n");
 			return (1);

@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * LQ_strlen - Returns the length of the input string
@@ -10,7 +11,7 @@
  */
 int LQ_strlen(char *s)
 {
-	if (s[0] == '\0')
+	if (s == NULL || s[0] == '\0')
 		return (0);
 
 	return (1 + LQ_strlen(&s[1]));

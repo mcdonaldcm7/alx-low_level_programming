@@ -30,12 +30,10 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, len1, len2;
 	char *comb;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-
 	len1 = LQ_strlen(s1);
 	len2 = LQ_strlen(s2);
 	comb = (char *) malloc((sizeof(char) * len1) + (sizeof(char) * len2) + 1);
+	
 	if (comb != NULL)
 	{
 		for (i = 0; i < len1; i++)
@@ -48,5 +46,6 @@ char *str_concat(char *s1, char *s2)
 		}
 		comb[i] = '\0';
 	}
+	comb[i] = '\0';
 	return (comb);
 }

@@ -89,9 +89,11 @@ char **strtow(char *str)
 	int *wordsi;
 	char **words;
 
-	if (str == NULL)
+	if (str == NULL || *str == " ")
 		return (NULL);
 	nowords = nwords(str);
+	if (nowords == 0)
+		return (NULL);
 	wordsi = indexes(str);
 	words = (char **) malloc((sizeof(char *) * nowords) + 1);
 	if (words != NULL)

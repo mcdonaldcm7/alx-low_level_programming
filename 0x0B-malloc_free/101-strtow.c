@@ -38,12 +38,11 @@ int nwords(char *str)
  *
  * Return: array of indexes
  */
-int wpos(char *str)
+int wpos(char *str, int pos)
 {
-	int size, i, count, index;
+	int i, count, index;
 	bool nWord;
 
-	size = nwords(str);
 	i = 0, count = 0, index = 0;
 	nWord = true;
 	while (str[i] != '\0')
@@ -100,7 +99,7 @@ char **strtow(char *str)
 		for (i = 0; i < nowords; i++)
 		{
 			words[i] =
-				(char *) malloc((sizeof(char *) * LQ_len(str, wpos(str, i + 1)) + 1);
+				(char *) malloc((sizeof(char *) * LQ_len(str, wpos(str, i + 1))) + 1);
 			if (words[i] == NULL)
 			{
 				int j;

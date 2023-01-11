@@ -11,3 +11,5 @@ This file contains a detailed description of the function definition contained i
   4-free_grid.c: This function frees a 2 dimensionaly grid previously created by the alloc_grid function.
 
   100-argstostr.c: This function concatenates all the arguments of your program.
+
+  101-strtow.c: This function splits a string into words.

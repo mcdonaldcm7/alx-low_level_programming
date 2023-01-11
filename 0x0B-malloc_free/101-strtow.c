@@ -89,7 +89,7 @@ char **strtow(char *str)
 	int *wordsi;
 	char **words;
 
-	if (str == NULL || *str == " ")
+	if (str == NULL)
 		return (NULL);
 	nowords = nwords(str);
 	if (nowords == 0)

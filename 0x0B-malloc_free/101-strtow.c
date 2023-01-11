@@ -38,42 +38,43 @@ int nwords(char *str)
  *
  * Return: array of indexes
  */
-int *indexes(char *str)
+int wpos(char *str)
 {
-	int *array;
-	int size, i, j;
+	int size, i, count, index;
 	bool nWord;
 
 	size = nwords(str);
-	array = (int *) malloc(sizeof(int) * size);
-	i = 0, j = 0;
+	i = 0, count = 0, index = 0;
 	nWord = true;
 	while (str[i] != '\0')
 	{
 		if (str[i] != ' ' && nWord)
 		{
-			array[j++] = i;
+			index = i;
+			count++;
+			if (count == pos)
+				break;
 			nWord = false;
 		} else if (str[i] == ' ')
 			nWord = true;
 		i++;
 	}
-	return (array);
+	return (index);
 }
 
 /**
- * LQ_strlen - calculates the length of str starting at index
+ * LQ_len - calculates the length of str starting at index
  *
  * @str: input string
  * @index: starting index
  *
  * Return: length of word in str
  */
-int LQ_strlen(char *str, int index)
+int LQ_len(char *str, int index)
 {
 	if (str[index] == '\0' || str[index] == ' ')
 		return (0);
-	return (1 + LQ_strlen(str, index + 1));
+	return (1 + LQ_len(str, index + 1));
 }
 
 /**
@@ -86,7 +87,6 @@ int LQ_strlen(char *str, int index)
 char **strtow(char *str)
 {
 	int nowords, i;
-	int *wordsi;
 	char **words;
 
 	if (str == NULL)
@@ -94,36 +94,34 @@ char **strtow(char *str)
 	nowords = nwords(str);
 	if (nowords == 0)
 		return (NULL);
-	wordsi = indexes(str);
 	words = (char **) malloc((sizeof(char *) * nowords) + 1);
 	if (words != NULL)
 	{
 		for (i = 0; i < nowords; i++)
 		{
 			words[i] =
-				(char *) malloc((sizeof(char *) * LQ_strlen(str, wordsi[i])) + 1);
+				(char *) malloc((sizeof(char *) * LQ_len(str, wpos(str, i + 1)) + 1);
 			if (words[i] == NULL)
 			{
 				int j;
 
 				for (j = 0; j < i; j++)
 					free(words[j]);
-				free(wordsi);
 				return (NULL);
 			}
 		}
 		for (i = 0; i < nowords; i++)
 		{
-			int iWord, j;
+			int iWord, j, windex;
 
-			iWord = LQ_strlen(str, wordsi[i]);
+			windex = wpos(str, i + 1);
+			iWord = LQ_len(str, windex);
 			for (j = 0; j < iWord; j++)
-				words[i][j] = str[wordsi[i] + j];
+				words[i][j] = str[windex + j];
 			words[i][j] = '\0';
 		}
 		words[i] = NULL;
 		return (words);
 	}
-	free(wordsi);
 	return (NULL);
 }

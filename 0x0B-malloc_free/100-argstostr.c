@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * LQ_strlen - Returns the length of s
@@ -33,7 +32,7 @@ int calcSize(char **av, int len)
 	size = 0;
 	for (i = 0; i < len; i++)
 	{
-		size += sizeof(LQ_strlen(av[i]));
+		size += LQ_strlen(av[i]);
 	}
 	return (size);
 }

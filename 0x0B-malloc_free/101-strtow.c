@@ -32,9 +32,10 @@ int nwords(char *str)
 }
 
 /**
- * wpos - fetches the indexes of the words found
+ * wpos - fetches the index of the specified words found
  *
  * @str: Input string
+ * @pos: Position of word to fetch
  *
  * Return: array of indexes
  */

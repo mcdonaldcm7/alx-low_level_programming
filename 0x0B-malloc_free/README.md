@@ -9,3 +9,5 @@ This file contains a detailed description of the function definition contained i
   3-alloc_grid.c: This function creates and initializes all the values in a 2-dimensional array to 0.
 
   4-free_grid.c: This function frees a 2 dimensionaly grid previously created by the alloc_grid function.
+
+  100-argstostr.c: This function concatenates all the arguments of your program.

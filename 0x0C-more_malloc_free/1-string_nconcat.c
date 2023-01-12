@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = lq_strlen(s1);
 	len2 = lq_strlen(s2);
 	len2 = n >= len2 ? len2 : n;
-	conctd = malloc(sizeof(char) * (len2 + len1) + 1);
+	conctd = (char *) malloc(sizeof(char) * (len2 + len1) + 1);
 	if (conctd != NULL)
 	{
 		unsigned int i, j;

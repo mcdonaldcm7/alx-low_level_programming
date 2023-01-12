@@ -2,4 +2,4 @@
 #define MAIN_H
 int _putchar(char);
 void *malloc_checked(unsigned int);
-#define MAIN_H
+#endif

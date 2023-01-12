@@ -10,7 +10,7 @@
  */
 int lq_strlen(char *s)
 {
-	if (s[0] == '\0')
+	if (s == NULL || s[0] == '\0')
 		return (0);
 	return (1 + lq_strlen(&s[1]));
 }
@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = lq_strlen(s1);
 	len2 = lq_strlen(s2);
 	len2 = n >= len2 ? len2 : n;
-	conctd = (char *) malloc(sizeof(char) * (len2 + len1) + 1);
+	conctd = malloc(sizeof(char) * (len2 + len1) + 1);
 	if (conctd != NULL)
 	{
 		unsigned int i, j;

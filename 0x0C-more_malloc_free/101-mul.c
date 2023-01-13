@@ -10,9 +10,9 @@
  * Return: Length of the string
  */
 
-int lq_strlen(char *s)
+unsigned int lq_strlen(char *s)
 {
-	int count;
+	unsigned int count;
 
 	count = 0;
 	while (s[count] != '\0')
@@ -46,7 +46,7 @@ bool isDigit(char c)
  */
 bool allDigit(char *s)
 {
-	int i;
+	unsigned long i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -65,9 +65,9 @@ bool allDigit(char *s)
  *
  * Return: Index of first number
  */
-int getIndex(char *s)
+unsigned int getIndex(char *s)
 {
-	int index;
+	unsigned int index;
 
 	index = 0;
 	while (!isDigit(s[index]) && s[index] != '\0')
@@ -187,7 +187,7 @@ unsigned long getPow(unsigned long n)
  */
 unsigned long raise(int base, unsigned long exp)
 {
-	int result;
+	unsigned int result;
 
 	result = 1;
 	while (exp > 0)

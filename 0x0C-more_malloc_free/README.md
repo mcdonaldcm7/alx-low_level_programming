@@ -9,3 +9,5 @@ This file contains a detail description of the function definition files contain
   3-array_range.c: This function creates an array of integer.
 
   100-realloc.c: This function reallocates a meory block using malloc and free.
+
+  101-mul.c: This program multiplies two positive integers.

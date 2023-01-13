@@ -164,7 +164,7 @@ unsigned long getPow(unsigned long n)
 	pow = 9;
 	divisor = 1000000000;
 	rem = n / divisor;
-	h = rem >= 0 ? rem : -rem;
+	h = rem;
 	while (h <= 0)
 	{
 		pow--;
@@ -172,7 +172,7 @@ unsigned long getPow(unsigned long n)
 		if (divisor == 0)
 			return (0);
 		rem = n / divisor;
-		h = rem >= 0 ? rem : -rem;
+		h = rem;
 	}
 	return (pow);
 }
@@ -208,13 +208,8 @@ void print_number(unsigned long n)
 	unsigned long digit, powDiff, pwr;
 	unsigned long num;
 
-	num = n >= 0 ? n : -n;
+	num = n;
 	powDiff = 0;
-	if (n < 0)
-	{
-		_putchar(45);
-	}
-
 	while (num > 0)
 	{
 		pwr = getPow(num);
@@ -245,14 +240,14 @@ void print_number(unsigned long n)
  */
 int main(int argc, char **argv)
 {
-	if (argc != 3)
+	if (argc != 3 || !allDigit(argv[1]) || !allDigit(argv[2]))
 	{
-		printf("Error\n");
-		exit(98);
-	}
-	if (!allDigit(argv[1]) || !allDigit(argv[2]))
-	{
-		printf("Error\n");
+		_putchar('E');
+		_putchar('r');
+		_putchar('r');
+		_putchar('o');
+		_putchar('r');
+		_putchar(10);
 		exit(98);
 	}
 	print_number(_atoi(argv[1]) * _atoi(argv[2]));

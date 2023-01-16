@@ -7,6 +7,8 @@
  * @name: dog's name to initialize d member name variable with
  * @age: dog's age to initialize d member age variable with
  * @owner: owner's name to initialize d memeber owner variable with
+ *
+ * Return: Nothing
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {

@@ -1,6 +1,13 @@
 #include "dog.h"
 #include <stdlib.h>
 
+/**
+ * lq_strlen - gets the length of a string
+ *
+ * @s: input string
+ *
+ * Return: length of s
+ */
 int lq_strlen(char *s)
 {
 	if (s == NULL || s[0] == '\0')
@@ -29,14 +36,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	index = 0;
 	if (ret != NULL)
 	{
-		while (name != NULL && name[index] != '\0')
+		while (name[index] != '\0')
 		{
 			nme[index] = name[index];
 			index++;
 		}
 		nme[index] = '\0';
 		index = 0;
-		while (owner != NULL && owner[index] != '\0')
+		while (owner[index] != '\0')
 		{
 			ownr[index] = owner[index];
 			index++;
@@ -45,6 +52,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		ret->name = nme;
 		ret->owner = ownr;
 		ret->age = age;
+		return (ret);
 	}
 	return (NULL);
 }

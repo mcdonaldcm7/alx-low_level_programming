@@ -7,7 +7,7 @@
  * @s: Operator passed as argument to the program
  *
  * Return: Pointer to the function that corresponds to the operator s
- */ 
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {

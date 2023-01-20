@@ -7,6 +7,6 @@
  *     */
 int main(void)
 {
-    print_all("ceifs", 'B', 3, 3.14159, "stSchool");
+    print_strings("", 3, "3", "3.14159", "stSchool");
     return (0);
 }

@@ -6,7 +6,7 @@
 /**
  * print_strings - Prints strings, followed by a new line
  *
- * @seperator: String to be printed between strings
+ * @separator: String to be printed between strings
  * @n: The number of strings passed to the function
  *
  * Return: Nothing

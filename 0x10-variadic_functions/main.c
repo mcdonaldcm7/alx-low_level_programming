@@ -7,6 +7,8 @@
  *     */
 int main(void)
 {
-    print_strings("", 3, "3", "3.14159", "stSchool");
+    print_numbers(", ", 5, 4, 0, 3, -1024, 402);
+    print_strings(", ", 3, "Jay", "Django", "Accolade");
+    print_all("ceisf", 'B', 3, "stSchool", 3.14159629);
     return (0);
 }

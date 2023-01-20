@@ -11,12 +11,12 @@
  *
  * Return: Nothing
  */
-void print_strings(const char *seperator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list args;
 
-	if (seperator == NULL || n <= 0)
+	if (separator == NULL)
 		return;
 	va_start(args, n);
 	for (i = 0; i < n; i++)
@@ -24,7 +24,7 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 		char *tmp;
 
 		if (i)
-			printf("%s", seperator);
+			printf("%s", separator);
 		tmp = va_arg(args, char *);
 		if (tmp == NULL)
 		{
@@ -33,6 +33,6 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 		}
 		printf("%s", tmp);
 	}
-	printf("\n");
 	va_end(args);
+	printf("\n");
 }

@@ -21,6 +21,9 @@ void print_all(const char * const fmt, ...)
 	{
 		char *s;
 
+		if (i && (fmt[i - 1] == 'c' || fmt[i - 1] == 'i' || fmt[i - 1] == 'f' ||
+					fmt[i - 1] == 's'))
+				printf(", ");
 		switch (fmt[i])
 		{
 			case 'c':
@@ -44,9 +47,6 @@ void print_all(const char * const fmt, ...)
 			default:
 				break;
 		}
-		if (i && (fmt[i] == 'c' || fmt[i] == 'i' || fmt[i] == 'f' ||
-					fmt[i] == 's'))
-			printf(", ");
 		i++;
 	}
 	va_end(args);

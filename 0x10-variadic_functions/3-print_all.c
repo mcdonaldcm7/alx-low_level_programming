@@ -21,8 +21,8 @@ void print_all(const char * const fmt, ...)
 	{
 		char *s;
 
-		if (i && (fmt[i - 1] == 'c' || fmt[i - 1] == 'i' || fmt[i - 1] == 'f' ||
-					fmt[i - 1] == 's'))
+			if (i && (fmt[i - 1] == 'c' || fmt[i - 1] == 'i' || fmt[i - 1] == 'f' ||
+						fmt[i - 1] == 's'))
 				printf(", ");
 		switch (fmt[i])
 		{

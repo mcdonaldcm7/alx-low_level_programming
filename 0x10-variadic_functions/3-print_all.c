@@ -17,13 +17,10 @@ void print_all(const char * const fmt, ...)
 
 	va_start(args, fmt);
 	i = 0;
-	while (fmt[i] != '\0')
+	while (fmt != NULL && fmt[i] != '\0')
 	{
 		char *s;
 
-		if (i && (fmt[i] == 'c' || fmt[i] == 'i' ||
-					fmt[i] == 'f' || fmt[i] == 's'))
-			printf(", ");
 		switch (fmt[i])
 		{
 			case 'c':
@@ -47,6 +44,9 @@ void print_all(const char * const fmt, ...)
 			default:
 				break;
 		}
+		if (i && (fmt[i] == 'c' || fmt[i] == 'i' || fmt[i] == 'f' ||
+					fmt[i] == 's'))
+			printf(", ");
 		i++;
 	}
 	va_end(args);

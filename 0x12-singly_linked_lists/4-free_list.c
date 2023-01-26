@@ -18,7 +18,9 @@ void free_list(list_t *head)
 	{
 		rmv = head;
 		head = head->next;
+		free(rmv->str);
 		free(rmv);
 	}
+	free(head->str);
 	free(head);
 }

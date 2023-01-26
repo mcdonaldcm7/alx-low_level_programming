@@ -16,7 +16,8 @@ unsigned int print_list(const list_t *h)
 			printf("[%u] %s\n", h->len, h->str);
 		else
 			printf("[0] (nil)\n");
-	}
+	} else
+		return (0);
 	if (h->next == ((void *) 0))
 	{
 		return (1);

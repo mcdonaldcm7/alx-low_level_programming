@@ -26,9 +26,7 @@ int lq_strlen(const char *s)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *end;
-	list_t *new;
-	int i;
+	list_t *new, *i;
 
 	new = malloc(sizeof(new));
 	if (new == ((void *) 0))
@@ -36,8 +34,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->str = strdup(str);
 	new->len = lq_strlen(str);
 	new->next = (void *) 0;
-	for (i = 0; head[i]->next != ((void *) 0); i++);
-	end = head[i];
-	end->next = new;
+	if (*head == ((void *) 0))
+	{
+		*head = new;
+	} else
+	{
+		for (i = *head; i->next != (void *) 0; i = i->next)
+			continue;
+		i->next = new;
+	}
 	return (new);
 }

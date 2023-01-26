@@ -9,3 +9,5 @@ This file contains file with function definitions for the functions whoose decla
 	add_node_end: Adds a new node at the end of a list_t and returns the address of the new element, or NULL if it failed.
 
 	free_list: Frees a list_t list
+
+	100-first.c: Prints a text before the main function

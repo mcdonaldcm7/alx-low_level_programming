@@ -5,3 +5,7 @@ This file contains file with function definitions for the functions whoose decla
 	list_len: A function that returns the number of elements in a linked list_t list.
 
 	add_node: Adds a new node at the beginning of a list_t list and returns the address of the new element.
+
+	add_node_end: Adds a new node at the end of a list_t and returns the address of the new element, or NULL if it failed.
+
+	free_list: Frees a list_t list

@@ -23,7 +23,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return ((void *) 0);
 	new->n = n;
 	navg = *head;
-	while (navg->next != ((void *) 0))
+	while (navg != ((void *) 0))
 	{
 		if (idx == 0 && i == 0)
 		{
@@ -31,7 +31,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			*head = new;
 			break;
 		}
-		if (idx > 0 && (i == (idx - 1)))
+		if (navg->next != (void *) 0 && (idx > 0 && (i == (idx - 1))))
 		{
 			new->next = navg->next;
 			navg->next = new;

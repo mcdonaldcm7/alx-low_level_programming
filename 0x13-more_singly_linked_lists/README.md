@@ -15,3 +15,5 @@ This file contains file with function definitions for the functions whoose decla
 	pop_listint: Deletes the head node of a listint_t linked_list, and returns the head node's data.
 
 	get_nodeint_at_index: This function returns the nth node of a listint_t linked list.
+
+	sum_listint: A function that returns the sum of all the data (n) of a listint_t linked list.

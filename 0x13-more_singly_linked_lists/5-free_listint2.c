@@ -12,7 +12,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *rmv;
 
-	if (*head == ((void *) 0))
+	if (head == ((void *) 0) || *head == ((void *) 0))
 		return;
 	while ((*head)->next != ((void *) 0))
 	{

@@ -9,3 +9,7 @@ This file contains file with function definitions for the functions whoose decla
 	add_nodeint_end: Adds a new node at the end of a listint_t and returns the address of the new element, or NULL if it failed.
 
 	free_listint: Frees a listint_t list
+
+	free_listint2: Frees a listint_tlist and sets the head to NULL.
+
+	pop_listint: Deletes the head node of a listint_t linked_list, and returns the head node's data.

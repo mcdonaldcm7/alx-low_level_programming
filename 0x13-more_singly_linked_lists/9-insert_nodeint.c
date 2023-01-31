@@ -31,7 +31,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			*head = new;
 			break;
 		}
-		if (navg->next != (void *) 0 && (idx > 0 && (i == (idx - 1))))
+		if (idx > 0 && (i == (idx - 1)))
 		{
 			new->next = navg->next;
 			navg->next = new;

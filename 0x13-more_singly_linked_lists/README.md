@@ -17,3 +17,5 @@ This file contains file with function definitions for the functions whoose decla
 	get_nodeint_at_index: This function returns the nth node of a listint_t linked list.
 
 	sum_listint: A function that returns the sum of all the data (n) of a listint_t linked list.
+
+	insert_nodeint_at_index: Inserts a new node at a given position.

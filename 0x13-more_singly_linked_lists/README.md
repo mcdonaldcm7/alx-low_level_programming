@@ -13,3 +13,5 @@ This file contains file with function definitions for the functions whoose decla
 	free_listint2: Frees a listint_tlist and sets the head to NULL.
 
 	pop_listint: Deletes the head node of a listint_t linked_list, and returns the head node's data.
+
+	get_nodeint_at_index: This function returns the nth node of a listint_t linked list.

@@ -1,6 +1,24 @@
 #include "lists.h"
 #include <stdlib.h>
 
+#include "lists.h"
+
+/**
+ * lq_listint_len - Returns the number of elements in a linked listint_t list.
+ *
+ * @h: Pointer to the head of the list
+ *
+ * Return: Number of elements in h
+ */
+unsigned int lq_listint_len(const listint_t *h)
+{
+	if (h == ((void *) 0))
+		return (0);
+	if (h->next == ((void *) 0))
+		return (1);
+	return (1 + lq_listint_len(h->next));
+}
+
 /**
  * insert_nodeint_at_index - Inserts a new node at a given position
  *
@@ -16,6 +34,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new, *navg;
 
 	i = 0;
+
+	if ((idx - 1) > lq_listint_len(*head))
+		return ((void *) 0);
 	if (head == (void *) 0)
 		return ((void *) 0);
 	new = malloc(sizeof(new));
@@ -33,8 +54,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 		if (idx > 0 && (i == (idx - 1)))
 		{
-			if (navg->next == (void *) 0)
-				break;
 			new->next = navg->next;
 			navg->next = new;
 			break;

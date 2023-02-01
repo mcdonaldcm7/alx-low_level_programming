@@ -19,3 +19,5 @@ This file contains file with function definitions for the functions whoose decla
 	sum_listint: A function that returns the sum of all the data (n) of a listint_t linked list.
 
 	insert_nodeint_at_index: Inserts a new node at a given position.
+
+	delete_nodeint_at_index: Deletes a node at the specified index.

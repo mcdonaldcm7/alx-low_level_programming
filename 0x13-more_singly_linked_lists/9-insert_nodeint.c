@@ -34,7 +34,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			continue;
 		if (navg->next == (void *) 0)
 		{
-			free(n_node);
 			return ((void *) 0);
 		}
 		n_node->n = n;

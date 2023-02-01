@@ -15,7 +15,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int i;
 	listint_t *n_node, *navg;
 
-	if (head == (void *) 0)
+	if (head == (void *) 0 || *head == (void *) 0)
 		return ((void *) 0);
 	n_node = malloc(sizeof(n_node));
 	if (n_node == ((void *) 0))

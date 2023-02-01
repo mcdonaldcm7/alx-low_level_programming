@@ -1,24 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
 
-#include "lists.h"
-
-/**
- * lq_listint_len - Returns the number of elements in a linked listint_t list.
- *
- * @h: Pointer to the head of the list
- *
- * Return: Number of elements in h
- */
-unsigned int lq_listint_len(const listint_t *h)
-{
-	if (h == ((void *) 0))
-		return (0);
-	if (h->next == ((void *) 0))
-		return (1);
-	return (1 + lq_listint_len(h->next));
-}
-
 /**
  * insert_nodeint_at_index - Inserts a new node at a given position
  *
@@ -31,35 +13,34 @@ unsigned int lq_listint_len(const listint_t *h)
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int i;
-	listint_t *new, *navg;
+	listint_t *n_node, *navg;
 
-	i = 0;
-
-	if ((idx - 1) > lq_listint_len(*head))
-		return ((void *) 0);
 	if (head == (void *) 0)
 		return ((void *) 0);
-	new = malloc(sizeof(new));
-	if (new == ((void *) 0))
+	n_node = malloc(sizeof(n_node));
+	if (n_node == ((void *) 0))
 		return ((void *) 0);
-	new->n = n;
 	navg = *head;
-	while (navg != ((void *) 0))
+	if (idx == 0)
 	{
-		if (idx == 0 && i == 0)
+		n_node->n = n;
+		n_node->next = *head;
+		*head = n_node;
+		return (n_node);
+	} else if (idx > 0)
+	{
+		for (i = 0; i < (idx - 1) && navg->next != (void *) 0;
+			i++, navg = navg->next)
+			continue;
+		if (navg->next == (void *) 0)
 		{
-			new->next = navg;
-			*head = new;
-			break;
+			free(n_node);
+			return ((void *) 0);
 		}
-		if (idx > 0 && (i == (idx - 1)))
-		{
-			new->next = navg->next;
-			navg->next = new;
-			break;
-		}
-		i++;
-		navg = navg->next;
+		n_node->n = n;
+		n_node->next = navg->next;
+		navg->next = n_node;
+		return (n_node);
 	}
-	return (new);
+	return ((void *) 0);
 }

@@ -10,12 +10,12 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	int clear;
+	unsigned long int clear;
 
 	if (n == (void *) 0)
 		return (-1);
 	clear = 1 << index;
-	if ((*n - clear) > 0)
+	if (*n > clear)
 	{
 		*n -= clear;
 		return (1);

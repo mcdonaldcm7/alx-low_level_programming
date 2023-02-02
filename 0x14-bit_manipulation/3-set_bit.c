@@ -10,12 +10,12 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	int set;
+	unsigned long int set;
 
 	if (n == (void *) 0)
 		return (-1);
 	set = 1 << index;
-	if ((*n - set) > 0)
+	if (*n > set)
 	{
 		*n += set;
 		return (1);

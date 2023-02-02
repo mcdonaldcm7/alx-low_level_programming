@@ -39,7 +39,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	int l, i;
 	unsigned int sum;
-	
+
 	if (b == (void *) 0)
 		return (0);
 	sum = 0;

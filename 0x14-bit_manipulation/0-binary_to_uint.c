@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * lq_strlen - Retrieves the length of a string
+ *
+ * @b: Input string
+ *
+ * Return: Length of b
+ */
 int lq_strlen(const char *b)
 {
 	if (b == (void *) 0 || b[0] == '\0')

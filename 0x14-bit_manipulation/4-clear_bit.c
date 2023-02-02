@@ -15,9 +15,9 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if (n == (void *) 0)
 		return (-1);
 	clear = 1 << index;
-	if ((*n - set) > 0)
+	if ((*n - clear) > 0)
 	{
-		*n -= set;
+		*n -= clear;
 		return (1);
 	}
 	return (-1);

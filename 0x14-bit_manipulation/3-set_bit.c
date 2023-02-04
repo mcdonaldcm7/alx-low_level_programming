@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * set_bit - Sets the value of a bit to 1 at a given index
@@ -15,7 +16,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if (n == (void *) 0)
 		return (-1);
 	set = 1 << index;
-	if (index > 0 && (set <= 1 || set > *n))
+	if (index > 0 && (set <= 1 || set > ULONG_MAX))
 		return (-1);
 	*n += set;
 	return (1);

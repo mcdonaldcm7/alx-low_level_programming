@@ -13,8 +13,8 @@
  */
 unsigned int read_textfile(const char *filename, unsigned int letters)
 {
-	int fd;
-	int count;
+	int fd, count;
+	unsigned int w;
 	char *buf;
 
 	if (filename == (void *) 0)
@@ -31,10 +31,10 @@ unsigned int read_textfile(const char *filename, unsigned int letters)
 	count = read(fd, buf, letters);
 	if (count != -1)
 	{
-		count = write(STDOUT_FILENO, buf, letters);
+		w = write(STDOUT_FILENO, buf, letters);
 	}
 	close(fd);
 	free(buf);
-	return ((count >= 0 && count == letters) ? count : 0);
+	return ((count >= 0 && w == letters) ? count : 0);
 }
 

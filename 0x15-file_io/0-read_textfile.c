@@ -1,6 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdlib.h>
 
 /**
  * read_textfile - Reads a text file and prints it to the POSIX standard output
@@ -13,18 +14,24 @@
 unsigned int read_textfile(const char *filename, unsigned int letters)
 {
 	int fd;
-	unsigned int count;
-	char buf[letters];
+	int count;
+	char *buf;
 
 	if (filename == (void *) 0)
 		return (0);
+	buf = malloc(sizeof(*buf) * letters);
+	if (buf == (void *) 0)
+		return (0);
 	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
 	count = read(fd, buf, letters);
 	if (count != -1)
 	{
-		count = write(STDOUT_FILENO, buf, sizeof(buf));
+		count = write(STDOUT_FILENO, buf, letters);
 	}
 	close(fd);
+	free(buf);
 	return (count >= 0 ? count : 0);
 }
 

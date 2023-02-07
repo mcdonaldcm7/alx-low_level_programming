@@ -31,13 +31,13 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (filename == (void *) 0)
 		return (-1);
 	s = lq_strlen(text_content);
-	fd = open(filename, O_APPEND);
+	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 		return (-1);
 	if (s > 0)
 	{
 		w = write(fd, text_content, s);
-		return ((w != -1 && w == s) ? 1 : -1);
 	}
-	
+	close(fd);
+	return ((w != -1 && w == s) ? 1 : -1);
 }

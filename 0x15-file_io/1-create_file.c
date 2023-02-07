@@ -18,7 +18,7 @@ int lq_strlen(char *text)
 
 /**
  * create_file - Creates a file, writes the argument string to it if provided
- * 
+ *
  * @filename: Name to give the file to create
  * @text_content: Argument string to write to the newly created file
  *
@@ -27,11 +27,12 @@ int lq_strlen(char *text)
 int create_file(const char *filename, char *text_content)
 {
 	int file, size, w;
-	
+
 	size = lq_strlen(text_content);
 	if (filename == (void *) 0)
-		return -1;
-	file = open(filename, (O_CREAT | O_RDWR | O_TRUNC));
+		return (-1);
+	file = open(filename,
+			(O_CREAT | O_RDWR | O_TRUNC), (S_IRUSR & S_IWUSR));
 	if (file == -1)
 		return (-1);
 	if (size > 0)
@@ -39,5 +40,5 @@ int create_file(const char *filename, char *text_content)
 		w = write(file, text_content, size);
 	}
 	close(file);
-	return ((w >= 0 && w == size) ? 1 : -1);
+	return ((w != -1 && w == size) ? 1 : -1);
 }

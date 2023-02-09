@@ -18,7 +18,8 @@ unsigned int lq_textlen(const char *filename)
 	char c;
 
 	count = 0;
-	if ((fd = open(filename, O_RDONLY)) < 0)
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
 		return (-1);
 	while ((bytes = read(fd, &c, sizeof(c))) > 0)
 	{

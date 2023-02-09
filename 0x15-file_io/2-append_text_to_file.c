@@ -28,6 +28,7 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, w, s;
 
+	w = 0;
 	if (filename == (void *) 0)
 		return (-1);
 	s = lq_strlen(text_content);

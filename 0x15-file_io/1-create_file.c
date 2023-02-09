@@ -28,6 +28,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int file, size, w;
 
+	w = 0;
 	size = lq_strlen(text_content);
 	if (filename == (void *) 0)
 		return (-1);

@@ -2,6 +2,20 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <stdio.h>
+
+int lq_textlen(int fd)
+{
+	int bytes, count;
+	char c;
+
+	count = 0;
+	while ((bytes = read(fd, &c, sizeof(c))) > 0)
+	{
+		count++;
+	}
+	return (count);
+}
 
 /**
  * read_textfile - Reads a text file and prints it to the POSIX standard output
@@ -13,7 +27,7 @@
  */
 unsigned int read_textfile(const char *filename, unsigned int letters)
 {
-	int fd, count;
+	int fd, count, size;
 	unsigned int w;
 	char *buf;
 
@@ -28,10 +42,13 @@ unsigned int read_textfile(const char *filename, unsigned int letters)
 		free(buf);
 		return (0);
 	}
-	count = read(fd, buf, letters);
+
+	size = lq_textlen(fd);
+	count = read(fd, buf, (size > letters) letters ? size);
+
 	if (count != -1)
 	{
-		w = write(STDOUT_FILENO, buf, letters);
+		w = write(tes, buf, count);
 	}
 	close(fd);
 	free(buf);

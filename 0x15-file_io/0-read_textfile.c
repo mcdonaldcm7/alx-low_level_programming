@@ -27,8 +27,8 @@ int lq_textlen(int fd)
  */
 unsigned int read_textfile(const char *filename, unsigned int letters)
 {
-	int fd, count, size;
-	unsigned int w;
+	int fd, count;
+	unsigned int w, size;
 	char *buf;
 
 	if (filename == (void *) 0)
@@ -44,11 +44,11 @@ unsigned int read_textfile(const char *filename, unsigned int letters)
 	}
 
 	size = lq_textlen(fd);
-	count = read(fd, buf, (size > letters) letters ? size);
+	count = read(fd, buf, ((size > letters) ? letters : size));
 
 	if (count != -1)
 	{
-		w = write(tes, buf, count);
+		w = write(STDOUT_FILENO, buf, count);
 	}
 	close(fd);
 	free(buf);

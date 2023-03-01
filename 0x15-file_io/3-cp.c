@@ -120,11 +120,9 @@ int main(int argc, char **argv)
 	buf = malloc(sizeof(*buf) * MAX_BUF);
 	if (buf == (void *) 0)
 		return (-1);
-	printf("Count is : %d, Size is : %d\n", count, size);
 	while (size > 0)
 	{
 		count = read_from(file_from, buf, size, argv[1]);
-		printf("Count is : %d, Size is : %d\n", count, size);
 		count = write_to(file_to, buf, size, argv[2]);
 		size -= count;
 	}

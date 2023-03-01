@@ -110,13 +110,14 @@ int main(int argc, char **argv)
 	}
 	size = lq_textlen(argv[1]), count = 0;
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR |
-					S_IRGRP | S_IWGRP | S_IROTH);
-	if (file_from == -1)
+	if (size <= 0 || file_from == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't read from file %s", argv[1]);
+		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR |
+                                        S_IRGRP | S_IWGRP | S_IROTH);
+
 	buf = malloc(sizeof(*buf) * MAX_BUF);
 	if (buf == (void *) 0)
 		return (-1);

@@ -110,7 +110,7 @@ int main(int argc, char **argv)
 	}
 	size = lq_textlen(argv[1]), count = 0;
 	file_from = open(argv[1], O_RDONLY);
-	if (size <= 0 || file_from == -1)
+	if (file_from == -1)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);

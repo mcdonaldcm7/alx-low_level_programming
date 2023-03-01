@@ -25,11 +25,21 @@ int lq_textlen(char *filename)
 		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", filename);
 		exit(98);
 	}
-	while ((bytes = read(fd, &c, sizeof(c))) > 0)
+
+	do {
+		bytes = read(fd, &c, sizeof(c));
+		if (bytes < 0)
+		{
+			dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", filename);
+			exit(98);
+		}
+	} while (bytes > 0);
+
+	if (close(fd) < 0)
 	{
-		count++;
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
 	}
-	close(fd);
 	return (count);
 }
 

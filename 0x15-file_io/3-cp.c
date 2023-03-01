@@ -33,6 +33,7 @@ int lq_textlen(char *filename)
 			dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", filename);
 			exit(98);
 		}
+		count++;
 	} while (bytes > 0);
 
 	if (close(fd) < 0)

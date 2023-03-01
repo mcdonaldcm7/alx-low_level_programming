@@ -127,6 +127,15 @@ int main(int argc, char **argv)
 		size -= count;
 	}
 	free(buf);
+	if (close(file_from) == -1)
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", file_from);
+		exit(100);
+	} else if (close(file_to) == -1)
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", file_to);
+		exit(100);
+	}
 	return (0);
 }
 

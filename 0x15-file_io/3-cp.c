@@ -116,7 +116,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR |
-                                        S_IRGRP | S_IWGRP | S_IROTH);
+			S_IRGRP | S_IWGRP | S_IROTH);
 
 	buf = malloc(sizeof(*buf) * MAX_BUF);
 	if (buf == (void *) 0)

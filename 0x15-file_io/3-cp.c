@@ -28,7 +28,7 @@ int lq_textlen(char *filename)
 
 	do {
 		bytes = read(fd, &c, sizeof(c));
-		if (bytes == -1)
+		if (bytes == -1 || (bytes > 0 && bytes != sizeof(c)))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 			exit(98);
@@ -62,7 +62,7 @@ int read_from(int fd, char *buf, int length, char *filename)
 	if (length < MAX_BUF)
 	{
 		count = read(fd, buf, length);
-		if (count < 0)
+		if (count < 0 || (count > 0 && count != length))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 			free(buf);
@@ -71,7 +71,7 @@ int read_from(int fd, char *buf, int length, char *filename)
 	} else
 	{
 		count = read(fd, buf, MAX_BUF);
-		if (count == -1)
+		if (count < 0 || (count > 0 && count != MAX_BUF))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 			free(buf);

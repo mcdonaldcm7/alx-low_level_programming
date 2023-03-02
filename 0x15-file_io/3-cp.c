@@ -28,7 +28,7 @@ int lq_textlen(char *filename)
 
 	do {
 		bytes = read(fd, &c, sizeof(c));
-		if (bytes < 0)
+		if (bytes == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 			exit(98);
@@ -36,7 +36,7 @@ int lq_textlen(char *filename)
 		count++;
 	} while (bytes > 0);
 
-	if (close(fd) < 0)
+	if (close(fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -63,7 +63,7 @@ int read_from(int fd, char *buf, int length, char *filename)
 		count = read(fd, buf, length);
 	else
 		count = read(fd, buf, MAX_BUF);
-	if (count < 0)
+	if (count == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 		free(buf);
@@ -88,9 +88,7 @@ int write_to(int fd, char *buf, int length, char *filename)
 
 	count = 0;
 	if (length < MAX_BUF)
-	{
 		count = write(fd, buf, length);
-	}
 	else
 		count = write(fd, buf, MAX_BUF);
 	if (count < 0)
@@ -140,11 +138,11 @@ int main(int argc, char **argv)
 		size -= count;
 	}
 	free(buf);
-	if (close(file_from) < 0)
+	if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
-	} else if (close(file_to) < 0)
+	} else if (close(file_to) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);

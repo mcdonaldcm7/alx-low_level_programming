@@ -60,14 +60,23 @@ int read_from(int fd, char *buf, int length, char *filename)
 
 	count = 0;
 	if (length < MAX_BUF)
-		count = read(fd, buf, length);
-	else
-		count = read(fd, buf, MAX_BUF);
-	if (count == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
-		free(buf);
-		exit(98);
+		count = read(fd, buf, length);
+		if (count == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+			free(buf);
+			exit(98);
+		}
+	} else
+	{
+		count = read(fd, buf, MAX_BUF);
+		if (count == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+			free(buf);
+			exit(98);
+		}
 	}
 	return (count);
 }
@@ -88,14 +97,23 @@ int write_to(int fd, char *buf, int length, char *filename)
 
 	count = 0;
 	if (length < MAX_BUF)
-		count = write(fd, buf, length);
-	else
-		count = write(fd, buf, MAX_BUF);
-	if (count < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-		free(buf);
-		exit(99);
+		count = write(fd, buf, length);
+		if (count == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+			free(buf);
+			exit(99);
+		}
+	} else
+	{
+		count = write(fd, buf, MAX_BUF);
+		if (count == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+			free(buf);
+			exit(99);
+		}
 	}
 	return (count);
 }

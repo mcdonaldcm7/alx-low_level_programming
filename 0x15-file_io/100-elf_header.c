@@ -126,7 +126,7 @@ void printVersion(unsigned char ei_version)
 			printf("%x (current)\n", EV_CURRENT);
 			break;
 		default:
-			printf("\n");
+			printf("%x\n", ei_version);
 			break;
 	}
 }
@@ -174,7 +174,7 @@ void printOSABI(unsigned char ei_osabi)
 			printf("Stand-alone (embedded)\n");
 			break;
 		default:
-			printf("\n");
+			printf("<unknown: %x>\n", ei_osabi);
 			break;
 	}
 }

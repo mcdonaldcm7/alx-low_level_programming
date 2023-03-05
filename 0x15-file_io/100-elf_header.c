@@ -96,10 +96,10 @@ void printDataEncoding(unsigned char ei_data)
 			printf("None\n");
 			break;
 		case ELFDATA2LSB:
-			printf("2's complement, little-endian\n");
+			printf("2's complement, little endian\n");
 			break;
 		case ELFDATA2MSB:
-			printf("2's complement, big-endian\n");
+			printf("2's complement, big endian\n");
 			break;
 		default:
 			printf("\n");
@@ -150,19 +150,19 @@ void printOSABI(unsigned char ei_osabi)
 			printf("HP-UX\n");
 			break;
 		case ELFOSABI_NETBSD:
-			printf("Unix-NetBSD\n");
+			printf("UNIX-NetBSD\n");
 			break;
 		case ELFOSABI_LINUX:
-			printf("Unix-Linux\n");
+			printf("UNIX-Linux\n");
 			break;
 		case ELFOSABI_SOLARIS:
-			printf("Unix-Solaris\n");
+			printf("UNIX-Solaris\n");
 			break;
 		case ELFOSABI_IRIX:
-			printf("Unix-IRIX\n");
+			printf("UNIX-IRIX\n");
 			break;
 		case ELFOSABI_FREEBSD:
-			printf("Unix-FreeBSD\n");
+			printf("UNIX-FreeBSD\n");
 			break;
 		case ELFOSABI_TRU64:
 			printf("TRU64 UNIX\n");

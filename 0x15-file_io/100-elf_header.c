@@ -100,6 +100,7 @@ void printDataEncoding(unsigned char ei_data)
 			break;
 		case ELFDATA2MSB:
 			printf("2's complement, big-endian\n");
+			break;
 		default:
 			printf("\n");
 			break;
@@ -246,7 +247,8 @@ void printEntry(Elf32_Addr e_entry)
 int main(int argc, char **argv)
 {
 	int fd;
-	ElfW(Ehdr) *header;
+
+	ElfW(Ehdr) * header;
 
 	if (argc != 2)
 	{

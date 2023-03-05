@@ -144,25 +144,25 @@ void printOSABI(unsigned char ei_osabi)
 	switch (ei_osabi)
 	{
 		case ELFOSABI_NONE | ELFOSABI_SYSV:
-			printf("UNIX-System V\n");
+			printf("UNIX - System V\n");
 			break;
 		case ELFOSABI_HPUX:
-			printf("HP-UX\n");
+			printf("HP - UX\n");
 			break;
 		case ELFOSABI_NETBSD:
-			printf("UNIX-NetBSD\n");
+			printf("UNIX - NetBSD\n");
 			break;
 		case ELFOSABI_LINUX:
-			printf("UNIX-Linux\n");
+			printf("UNIX - Linux\n");
 			break;
 		case ELFOSABI_SOLARIS:
-			printf("UNIX-Solaris\n");
+			printf("UNIX - Solaris\n");
 			break;
 		case ELFOSABI_IRIX:
-			printf("UNIX-IRIX\n");
+			printf("UNIX - IRIX\n");
 			break;
 		case ELFOSABI_FREEBSD:
-			printf("UNIX-FreeBSD\n");
+			printf("UNIX - FreeBSD\n");
 			break;
 		case ELFOSABI_TRU64:
 			printf("TRU64 UNIX\n");

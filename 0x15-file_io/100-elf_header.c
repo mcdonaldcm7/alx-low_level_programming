@@ -6,6 +6,12 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+#if defined(__LP64__)
+#define ElfW(type) Elf64_ ## type
+#else
+#define ElfW(type) Elf32_ ## type
+#endif
+
 /**
  * isELF - Checks whether or not the file associated with fd is an ELF file
  *
@@ -69,6 +75,7 @@ void printClass(unsigned char ei_class)
 			printf("ELF64\n");
 			break;
 		default:
+			printf("\n");
 			break;
 	}
 }
@@ -94,6 +101,7 @@ void printDataEncoding(unsigned char ei_data)
 		case ELFDATA2MSB:
 			printf("2's complement, big-endian\n");
 		default:
+			printf("\n");
 			break;
 	}
 }
@@ -117,6 +125,7 @@ void printVersion(unsigned char ei_version)
 			printf("%x (current)\n", EV_CURRENT);
 			break;
 		default:
+			printf("\n");
 			break;
 	}
 }
@@ -134,25 +143,25 @@ void printOSABI(unsigned char ei_osabi)
 	switch (ei_osabi)
 	{
 		case ELFOSABI_NONE | ELFOSABI_SYSV:
-			printf("UNIX System V\n");
+			printf("UNIX-System V\n");
 			break;
 		case ELFOSABI_HPUX:
 			printf("HP-UX\n");
 			break;
 		case ELFOSABI_NETBSD:
-			printf("NetBSD\n");
+			printf("Unix-NetBSD\n");
 			break;
 		case ELFOSABI_LINUX:
-			printf("Linux\n");
+			printf("Unix-Linux\n");
 			break;
 		case ELFOSABI_SOLARIS:
-			printf("Solaris\n");
+			printf("Unix-Solaris\n");
 			break;
 		case ELFOSABI_IRIX:
-			printf("IRIX\n");
+			printf("Unix-IRIX\n");
 			break;
 		case ELFOSABI_FREEBSD:
-			printf("FreeBSD\n");
+			printf("Unix-FreeBSD\n");
 			break;
 		case ELFOSABI_TRU64:
 			printf("TRU64 UNIX\n");
@@ -164,6 +173,7 @@ void printOSABI(unsigned char ei_osabi)
 			printf("Stand-alone (embedded)\n");
 			break;
 		default:
+			printf("\n");
 			break;
 	}
 }
@@ -208,6 +218,7 @@ void printType(unsigned short e_type)
 			printf("CORE (Core file)\n");
 			break;
 		default:
+			printf("\n");
 			break;
 	}
 }
@@ -219,9 +230,9 @@ void printType(unsigned short e_type)
  *
  * Return: Nothing
  */
-void printEntry(Elf64_Addr e_entry)
+void printEntry(Elf32_Addr e_entry)
 {
-	printf("  Entry point address:               0x%lx\n", e_entry);
+	printf("  Entry point address:               0x%x\n", e_entry);
 }
 
 /**
@@ -235,7 +246,7 @@ void printEntry(Elf64_Addr e_entry)
 int main(int argc, char **argv)
 {
 	int fd;
-	Elf64_Ehdr *header;
+	ElfW(Ehdr) *header;
 
 	if (argc != 2)
 	{

@@ -20,4 +20,5 @@ unsigned int print_dlistint(const dlistint_t *);
 unsigned int dlistint_len(const dlistint_t *);
 dlistint_t *add_dnodeint(dlistint_t **, const int);
 dlistint_t *add_dnodeint_end(dlistint_t **, const int);
+void free_dlistint(dlistint_t *);
 #endif

@@ -1,5 +1,4 @@
 #include "lists.h"
-/*#include <stddef.h>*/
 
 /**
  * print_dlistint - Prints all the element of a dlistint_t list
@@ -17,6 +16,7 @@ unsigned int print_dlistint(const dlistint_t *h)
 	iter = h;
 	while (iter)
 	{
+		printf("%d\n", iter->n);
 		iter = iter->next;
 		count++;
 	}

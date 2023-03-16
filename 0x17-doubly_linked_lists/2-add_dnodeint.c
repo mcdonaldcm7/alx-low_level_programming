@@ -17,6 +17,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if (nhead == (void *) 0)
 		return (nhead);
 	nhead->n = n;
+	nhead->prev = (void *) 0;
 	if (head == (void *) 0 || *head == (void *) 0)
 	{
 		nhead->next = (void *) 0;
@@ -24,7 +25,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	{
 		nhead->next = *head;
 	}
-	nhead->prev = (void *) 0;
-	*head =  nhead;
+	head = &nhead;
 	return (nhead);
 }

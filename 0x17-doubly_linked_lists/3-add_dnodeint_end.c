@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * add_dnodeint_end - Adds a new node at the end of a dlistint_t list
@@ -11,19 +12,26 @@
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *iter;
+	dlistint_t *iter, *new;
 
-	iter = *head;
 	new = malloc(sizeof(*new));
 	if (new == (void *) 0)
 		return (new);
-	while (*iter)
-	{
-		iter = iter->next;
-	}
 	new->n = n;
 	new->next = (void *) 0;
-	new->prev = iter->prev;
-	new->prev->next = new;
+	if (head != (void *) 0 && *head != (void *) 0)
+	{
+		iter = *head;
+		while (iter->next != (void *) 0)
+		{
+			iter = iter->next;
+		}
+		new->prev = iter;
+		iter->next = new;
+	} else
+	{	
+		new->prev = (void *) 0;
+		*head = new;
+	}
 	return (new);
 }

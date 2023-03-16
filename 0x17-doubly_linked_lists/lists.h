@@ -17,4 +17,5 @@ typedef struct dlistint_s
 } dlistint_t;
 
 unsigned int print_dlistint(const dlistint_t *);
+unsigned int dlist_len(const dlistint_t *);
 #endif

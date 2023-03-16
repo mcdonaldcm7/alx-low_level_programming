@@ -34,7 +34,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		iter = iter->next;
 		count++;
 	}
-	if (count == 0 && idx == 0)
+	if (*head == (void *) 0 && idx == 0)
 	{
 		new = malloc(sizeof(*new));
 		if (new == (void *) 0)

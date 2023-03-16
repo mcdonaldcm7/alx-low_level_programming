@@ -29,7 +29,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		new->prev = iter;
 		iter->next = new;
 	} else
-	{	
+	{
 		new->prev = (void *) 0;
 		*head = new;
 	}

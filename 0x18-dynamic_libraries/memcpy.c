@@ -7,7 +7,7 @@
  * @dest: Memory address of destination string
  * @n: Number of bytes to copy
  *
- * Return :Pointer to copied string
+ * Return: Pointer to copied string
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {

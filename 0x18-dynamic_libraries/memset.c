@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset: Sets index in s to b
+ * _memset - Sets index in s to b
  *
  * @s: Input string
  * @b: Input character

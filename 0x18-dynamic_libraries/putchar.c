@@ -2,13 +2,14 @@
 #include "main.h"
 
 /**
- * _putchar - Writes a character to the standard output
+ * _putchar - Writes a character c to stdout
  *
- * @c: Character to write
+ * @c: The character to print
  *
- * Return: Number of byte written (1) on success
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately
  */
 int _putchar(char c)
 {
-	return (write(STDOUT_FILENO, &c, 1));
+	return (write(1, &c, 1));
 }

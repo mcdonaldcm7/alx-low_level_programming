@@ -20,4 +20,9 @@ char *_strchr(char *, char);
 unsigned int _strspn(char *, char *);
 char *_strpbrk(char *, char *);
 char *_strstr(char *, char *);
+int add(int, int);
+int sub(int, int);
+int mul(int, int);
+int div(int, int);
+int mod(int, int);
 #endif

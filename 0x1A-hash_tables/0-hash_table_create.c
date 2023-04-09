@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * hash_table - Creates a hash_table
+ * hash_table_create - Creates a hash_table
  *
  * @size: The size of the array
  *
@@ -11,7 +11,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *table;
-	hash_node_t *arr;
+	hash_node_t **arr;
 
 	table = malloc(sizeof(*table));
 	if (table == (void *) 0)
@@ -20,6 +20,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	arr = malloc(sizeof(*arr) * size);
 	if (arr == (void *) 0)
 		return ((void *) 0);
-	table->array = &arr;
+	table->array = arr;
 	return (table);
 }

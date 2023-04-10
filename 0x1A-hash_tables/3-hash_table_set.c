@@ -97,7 +97,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (_strcmp((*at_index)->key, key) == 0)
 		{
+			free((*at_index)->value);
 			(*at_index)->value = _strcpy(value);
+			free(tmp->key);
+			free(tmp->value);
 			free(tmp);
 		} else
 		{

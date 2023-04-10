@@ -19,18 +19,15 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	at_index = &ht->array[index];
 	if (*at_index == (void *) 0)
 		return ((void *) 0);
-	else
-	{
-		iter = *at_index;
+	iter = *at_index;
 
-		while (iter)
+	while (iter)
+	{
+		if (_strcmp(iter->key, key) == 0)
 		{
-			if (_strcmp(iter->key, key) == 0)
-			{
-				return (iter->value);
-			}
-			iter = iter->next;
+			return (iter->value);
 		}
+		iter = iter->next;
 	}
 	return ((void *) 0);
 }

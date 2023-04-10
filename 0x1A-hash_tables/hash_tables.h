@@ -37,4 +37,5 @@ char *hash_table_get(const hash_table_t *, const char *);
 unsigned int _strlen(const char *);
 int _strcmp(const char *, const char *);
 void hash_table_print(const hash_table_t *);
+void hash_table_delete(hash_table_t *);
 #endif

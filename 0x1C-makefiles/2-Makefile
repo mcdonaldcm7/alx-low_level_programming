@@ -2,6 +2,7 @@ NAME = school
 CC = gcc
 OBJ = main.o school.o
 SRC = school.c main.c
+.PHONY: all $(NAME)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(SRC)

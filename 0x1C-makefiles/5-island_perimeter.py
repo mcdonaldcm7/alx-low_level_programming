@@ -13,13 +13,8 @@ def island_perimeter(grid):
             grid, list) or not isinstance(grid[0], list):
         return (0)
     fence_x = list(0 for i in range(len(grid[0])))
-    fence_y = list(0 for i in range(len(grid)))
-    for i in range(len(grid)):
-        fence_y[y] += sum(grid[y])
-        for j in range(len(grid[0])):
-            if grid[i][j] > 0:
-                fence_x[j] += 1
-    xtra = 0
-    if len(grid) != len(grid[0]):
-        return (4 * max(fence_x) + 2 * (max(fence_y) - 1))
+    for y in range(len(grid)):
+        for x in range(len(grid[0])):
+            if grid[y][x] > 0:
+                fence_x[x] += 1
     return (4 * max(fence_x))

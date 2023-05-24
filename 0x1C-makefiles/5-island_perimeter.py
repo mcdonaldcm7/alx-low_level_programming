@@ -22,4 +22,4 @@ def island_perimeter(grid):
     xtra = 0
     if len(grid) != len(grid[0]):
         return (4 * max(fence_x) + 2 * (max(fence_y) - 1))
-    return (4 * max(fence))
+    return (4 * max(fence_x))

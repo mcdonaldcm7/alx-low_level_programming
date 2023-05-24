@@ -1,11 +1,10 @@
-
-.PHONY: all school
-all: school
-
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
+
+.PHONY: all $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJ) $(SRC)
 	$(CC) $(OBJ) -o $(NAME)

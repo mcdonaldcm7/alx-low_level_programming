@@ -6,9 +6,3 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-school.o: m.h
-	$(CC) -c -o school.o school.c
-
-main.o: 
-	$(CC) -c -o main.o main.c

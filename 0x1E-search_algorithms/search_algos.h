@@ -4,4 +4,6 @@ int linear_search(int *, unsigned int, int);
 int binary_search(int *, unsigned int, int);
 int jump_search(int *, unsigned int, int);
 int interpolation_search(int *, unsigned int, int);
+int exponential_search(int *, unsigned int, int);
+int advanced_binary(int *, unsigned int, int);
 #endif

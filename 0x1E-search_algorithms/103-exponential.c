@@ -90,6 +90,7 @@ int exponential_search(int *array, unsigned int size, int value)
 	if (!array || size == 0)
 		return (-1);
 	bound = 1;
+	Favour
 	while (bound < size && array[bound] < value)
 	{
 		printf("Value checked array[%u] = [%d]\n",

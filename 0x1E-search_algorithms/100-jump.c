@@ -1,7 +1,6 @@
 #include "search_algos.h"
 #include <math.h>
 #include <stdio.h>
-#include <stdbool.h>
 
 /**
  * jump_search - Searches for a value in a sorted array of integers using the
@@ -24,7 +23,7 @@ int jump_search(int *array, unsigned int size, int value)
 	do {
 		printf("Value checked array[%u] = [%d]\n", b, array[b]);
 		b += block;
-	} while (array[b] < value && b < size);
+	} while (b < size && array[b] < value);
 
 	printf("Value found between indexes [%u] and [%u]\n", b - block, b);
 	for (i = b - block; i <= b && i < size; i++)

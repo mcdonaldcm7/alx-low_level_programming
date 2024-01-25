@@ -7,12 +7,9 @@
  */
 int s_length(char *s)
 {
-	int i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (s[0] == '\0')
+		return (0);
+	return (1 + s_length(&s[1]));
 }
 
 
